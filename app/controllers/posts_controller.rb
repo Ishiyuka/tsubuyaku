@@ -35,6 +35,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post.destroy
+    redirect_to blogs_path, notice:"つぶやき削除しました！"
+  end
+
     private
 
     def post_params
